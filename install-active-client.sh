@@ -18,7 +18,7 @@ fi
 
 # Config generation: PSK
 
-CONFIG_DIR="/etc/zabbix/zabbix_agentd.d"
+CONFIG_DIR="$(dirname "$0")"
 PSK_FILE="$CONFIG_DIR/psk"
 openssl rand -hex 64 > "$PSK_FILE"
 
