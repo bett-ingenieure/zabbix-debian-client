@@ -4,6 +4,9 @@
 apt update
 apt install nut
 
+echo ""
+echo ""
+
 # Ask for the server's hostname
 
 read -p "Enter the server hostname: " SERVER_HOSTNAME
@@ -18,7 +21,7 @@ fi
 
 # Config generation: PSK
 
-CONFIG_DIR="$(dirname "$0")"
+CONFIG_DIR="$(dirname "$0")/zabbix_agentd.d"
 PSK_FILE="$CONFIG_DIR/psk"
 openssl rand -hex 64 > "$PSK_FILE"
 
@@ -45,8 +48,10 @@ sed -e "s/\[SERVER_HOSTNAME\]/$SERVER_HOSTNAME/g" \
 PSK_CONTENT=$(cat "$PSK_FILE")
 echo "Success! The configuration has been saved."
 echo ""
-echo "Client hostname: $CLIENT_HOSTNAME"
-echo "Generated PSK  : $PSK_CONTENT"
+echo "Client hostname : $CLIENT_HOSTNAME"
+echo "Generated PSK   : $PSK_CONTENT"
 echo ""
 echo "You can now restart the Zabbix agent using the following command:"
 echo "service zabbix-agent restart"
+echo ""
+echo ""
