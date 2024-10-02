@@ -31,7 +31,7 @@ chmod 0600 "$PSK_FILE"
 
 # Config generation
 
-TEMPLATE_FILE="$CONFIG_DIR/client-active-template.conf"
+TEMPLATE_FILE="$CONFIG_DIR/client-active.conf-template"
 OUTPUT_FILE="$CONFIG_DIR/client-active.conf"
 
 if [ ! -f "$TEMPLATE_FILE" ]; then
