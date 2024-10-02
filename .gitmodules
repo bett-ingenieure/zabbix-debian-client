@@ -1,0 +1,3 @@
+[submodule "external-packages/Zabbix-NUT-Template"]
+	path = external-packages/Zabbix-NUT-Template
+	url = https://github.com/delin/Zabbix-NUT-Template.git
