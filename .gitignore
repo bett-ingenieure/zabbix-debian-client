@@ -1,3 +1,5 @@
 .idea
 zabbix_agentd.d/psk
 zabbix_agentd.d/client-active.conf
+zabbix_agent2.d/psk
+zabbix_agent2.d/client-active.conf
