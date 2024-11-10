@@ -47,6 +47,12 @@ sed -e "s/\[SERVER_HOSTNAME\]/$SERVER_HOSTNAME/g" \
 
 # END
 
+# ZFS_ON_LINUX
+
+wget -q https://raw.githubusercontent.com/zabbix/community-templates/refs/heads/main/Operating_Systems/Linux/template_zfs_on_linux/6.0/userparams_zol_without_sudo.conf --directory-prefix="$CONFIG_DIR"
+
+# END
+
 PSK_CONTENT=$(cat "$PSK_FILE")
 echo "Success! The configuration has been saved."
 echo ""
