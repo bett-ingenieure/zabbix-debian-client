@@ -1,10 +1,6 @@
 #!/bin/bash
 
-git submodule init && git submodule update
-
-# Install dependencies
-apt update
-apt install nut
+"$(dirname "$0")/update-active-client2.sh"
 
 echo ""
 echo ""
@@ -44,12 +40,6 @@ fi
 sed -e "s/\[SERVER_HOSTNAME\]/$SERVER_HOSTNAME/g" \
     -e "s/\[CLIENT_HOSTNAME\]/$CLIENT_HOSTNAME/g" \
     "$TEMPLATE_FILE" > "$OUTPUT_FILE"
-
-# END
-
-# ZFS_ON_LINUX
-
-wget -q https://raw.githubusercontent.com/zabbix/community-templates/refs/heads/main/Operating_Systems/Linux/template_zfs_on_linux/6.0/userparams_zol_without_sudo.conf --directory-prefix="$CONFIG_DIR"
 
 # END
 
