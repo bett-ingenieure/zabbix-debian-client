@@ -3,7 +3,7 @@
 # Problem: smart discovery fails, because the exit code is 8 (there is a smart error) and != 0
 # So we suppress potential non fatal exit codes while scanning
 
-smartctl $@
+smartctl "$@"
 RETURN_CODE=$?
 
 # Check if --scan is in arguments
